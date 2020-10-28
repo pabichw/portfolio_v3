@@ -40,10 +40,10 @@ class HomePanel extends Component {
         </div>
         <header className="home-text-wrapper">
           <h3>Hello there</h3>
-          <h1>IM WIKTOR</h1>
+          <h1>I'M WIKTOR</h1>
           <h3>a<br/>front-end developer</h3>
           <div className="resume-button-wrapper">
-            <CallToActionButton text={"See my LinkedIn"} icon={<i className="far fa-id-card"/>} action={() => window.location.href = linkedInUrl}/>
+            <CallToActionButton text="See my LinkedIn" icon={<i className="far fa-id-card"/>} action={() => window.location.href = linkedInUrl}/>
           </div>
         </header>
         <a href="#aboutMe" className="scroll-down-incent">

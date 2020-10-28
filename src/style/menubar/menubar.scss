@@ -13,13 +13,13 @@
   z-index: 999;
 }
 .menubar-free{
-  margin-top: 97px;
-  animation: animateTopbarMakeFree 0.75s ease-out;
+  padding-top: 97px;
+  animation: animateTopbarMakeFree 0.3s ease, dipToTransparent 0.3s ease forwards;
 }
 .menubar-sticked{
-  margin-top: 20px;
+  padding-top: 20px;
   font-size: 0.9em;
-  animation: animateTopbarMakeSticked 0.75s ease-out;
+  animation: animateTopbarMakeSticked 0.3s ease, dipToBlack 0.3s ease forwards;
 }
 .dummy{
   width: 100px;
@@ -47,21 +47,21 @@
 }
 @keyframes animateTopbarMakeSticked {
   0% {
-    margin-top: 97px;
+    padding-top: 97px;
     font-size: 1.1em;
   }
   100% {
-    margin-top: 20px;
+    padding-top: 20px;
     font-size: 0.9em;
   }
 }
 @keyframes animateTopbarMakeFree {
   100% {
-    margin-top: 97px;
+    padding-top: 97px;
     font-size: 1.1em;
   }
   0% {
-    margin-top: 20px;
+    padding-top: 20px;
     font-size: 0.9em;
   }
 }
@@ -70,5 +70,21 @@
     opacity: 0.5;
   } 100% {
     opacity: 1;
+  }
+}
+
+@keyframes dipToBlack {
+  0% {
+    background: transparent;
+  } 100% {
+      background: black;
+    }
+}
+
+@keyframes dipToTransparent {
+  0% {
+    background: black;
+  } 100% {
+      background: transparent;
   }
 }

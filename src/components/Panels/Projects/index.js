@@ -55,7 +55,7 @@ class ProjectsPanel extends Component {
     return (
       <main id="projects" className="projects-panel-wrapper" >
         <article className="introduction">
-          <h2>Projects:</h2>
+          <h2 className='section-title'>Projects:</h2>
           <p>Although, I have (almost) no commercial experience I try to spend as much time as
             I can making my own projects in order to self-develop. Also I was a Lodz University of Technology student, so I had to make some
             projects for grades whether I like It or not ;) I have listed a few below.

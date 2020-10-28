@@ -38,6 +38,13 @@
 }
 .desc-container{
   margin: 0 25px;
+
+  max-width: 40%;
+
+  @media screen and (max-width: 700px) {
+    max-width: initial;
+  }
+
 }
 .project-img{
   margin: 0 auto;
@@ -47,6 +54,9 @@
   margin-bottom: 10px;
   text-align: center;
   font-size: 25px;
+}
+.project-desc{
+  text-align: center;
 }
 .underline-project-name{
   text-decoration: none;
@@ -73,12 +83,26 @@
 .project-repo{
   text-align: center;
   cursor: pointer;
-
+  display: inline-block;
+  margin-bottom: 5px;
   color: $secondary-color;
   font-weight: bold;
 }
 .project-repo:hover{
   color: $secondary-color-highlighted;
+}
+
+.project-demo{
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 6px;
+
+  color: $gold;
+  font-weight: bold;
+}
+.project-demo:hover{
+  color: $primary-font-color;
 }
 
 @media screen and (max-width: 700px) {

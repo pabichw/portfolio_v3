@@ -6,7 +6,9 @@
     "node-sass": "^4.11.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "react-scripts": "^2.1.8"
+    "react-scripts": "^2.1.8",
+    "react-scroll-parallax": "^2.3.4",
+    "react-scroll-to": "^3.0.0-beta.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,6 +25,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

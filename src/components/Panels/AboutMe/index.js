@@ -12,8 +12,8 @@ const workIco = require('../../../resources/images/work-ico.png');
 class AboutMe extends Component {
     state = {
       facts: [
+        {label: 'I\'ve got about 1.5 yr of commercial experience', ico: <img src={workIco} className="fact-ico" alt="work" />},
         {label: 'I’m a Bachelor of Computer Science', ico: <img src={studentIco} className="fact-ico" alt="student" />},
-        {label: 'I was interning in a company for 3 months', ico: <img src={workIco} className="fact-ico" alt="work" />},
         {label: 'I enjoy front-end development!', ico: <RoundedHeart/>},
 
       ],
@@ -43,19 +43,19 @@ class AboutMe extends Component {
                 })}
               </ul>
             </div>
-            <div className="about-me-bottom-container">
-              <h3 className="technologies-label">Some technologies I work with:</h3>
-              <div className="technologies-wrapper">
-                {technologies.map((t, i) => {
-                  return(
-                    <div key={i} className="technologies-item-wrapper">
-                      <img alt={t.name + " icon"} className="technologies-item-icon" src={t.img}/>
-                      <p>{t.name}</p>
-                    </div>
-                  );
-                })}
-              </div>
-              </div>
+            {/*<div className="about-me-bottom-container">*/}
+            {/*  <h3 className="technologies-label">Some technologies I work with:</h3>*/}
+            {/*  <div className="technologies-wrapper">*/}
+            {/*    {technologies.map((t, i) => {*/}
+            {/*      return(*/}
+            {/*        <div key={i} className="technologies-item-wrapper">*/}
+            {/*          <img alt={t.name + " icon"} className="technologies-item-icon" src={t.img}/>*/}
+            {/*          <p>{t.name}</p>*/}
+            {/*        </div>*/}
+            {/*      );*/}
+            {/*    })}*/}
+            {/*  </div>*/}
+            {/*</div>*/}
           </div>
         );
     }

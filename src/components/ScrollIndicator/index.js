@@ -19,8 +19,7 @@ class ScrollIndicator extends Component {
       activeScreen: {name: 'home', anchorID: 'home'},
     };
   }
-
-
+  
   _handleOnScroll = () => {
     const currPosY = window.scrollY;
     const { activeScreen, screens } = this.state;

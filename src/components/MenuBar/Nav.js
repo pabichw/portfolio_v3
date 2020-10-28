@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import '../../style/menubar/nav.scss';
 import {MobileUtils} from "../../utils/MobileUtils";
 
-const burgerIco = require("../../resources/images/burger_ico_white.png");
+const burgerIco = require("../../resources/images/burger_ico_white.svg");
 const burgerIcoDark = require("../../resources/images/burger_ico.svg");
-const xIco = require("../../resources/images/x_ico_white.png");
-const xIcoDark = require("../../resources/images/x_ico_black.png");
+const xIco = require("../../resources/images/x_ico_white.svg");
+const xIcoDark = require("../../resources/images/x_ico_black.svg");
 
 class Nav extends Component {
 
@@ -56,7 +56,7 @@ class Nav extends Component {
           {tabs.map((tab, i) => {
             return (
               <a key={i}
-                 className={"tab ".concat(isAfterHomePanel ? (isMobile ? 'white-font' : 'black-font') : 'white-font')}
+                 className={"tab white-font"}
                  onClick={this._handleTabOnClick}
                  href={tab.anchor}>{tab.name}</a>
             )

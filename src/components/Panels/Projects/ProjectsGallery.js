@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../../../style/panels/projects/projectsGallery.scss';
 
+// const twitchCloneVideo = require('../../../resources/videos/twitch-clone-demo.mp4');
 const canteenVideo = require('../../../resources/videos/canteen_all.mp4');
 const spedtitionVideo = require('../../../resources/videos/spedition.mp4');
 const gdzieJestMeczImg = require('../../../resources/images/gdzie_jest_mecz.png');
@@ -10,6 +11,14 @@ const gdzieJestMeczImg = require('../../../resources/images/gdzie_jest_mecz.png'
 class ProjectsGallery extends Component {
   state = {
     projects: [
+      {
+        name: 'Twitch clone',
+        desc: 'Twitch.tv rip off based on Twitch Dev API.\nI wanted to see how far I can go with making 1:1 twitch clone using publicly available API. Turns out not so far :)\nFor this project I also created simple, proxy-like API to send my requests through',
+        video: null,
+        repository: 'https://github.com/pabichw/twitch-clone',
+        demo: 'https://twitch.pabich.cc',
+        techStack: ['React', 'Typescript', 'Redux', 'Node (for API)']
+      },
       {
         name: 'Canteen',
         desc: 'My bachelor of science thesis.\n' +
@@ -22,18 +31,9 @@ class ProjectsGallery extends Component {
         techStack: ['React Native', 'Ruby On Rails', 'MongoDB']
       },
       {
-        name: 'Transport Manager:',
-        desc: `This is an application I’ve made with my colleagues. It’s main purpose was to let transport fleet managers to manage their drivers more efficient. One could assign driver to a truck and order, communicate with them and keep track of progress. 
-          Each driver had a personalized account where he could see his current or future jobs.
-          I was responsible for a piece of the front-end part, which was created using React, Redux and JavaScript mostly.`,
-        video: spedtitionVideo,
-        repository: 'https://gitlab.com/pabichw/projekt-spedycja',
-        techStack: ['React.js', 'Ruby On Rails', 'Postgres']
-      },
-      {
         name: 'Cho Na Mecz',
         desc: 'Another group project.\n' +
-          'Android app indicating match transmissions in local pubs. I was responsible for Android part of the application.\nNo video - all I could find was this screenshoot',
+          'Android app indicating match transmissions in local pubs. I was responsible for Android part of the application.\nNo video - all I could find is this screenshoot',
         img: gdzieJestMeczImg,
         repository: 'https://github.com/TM2gr4/gdzie-jest-mecz',
         techStack: ['Android SDK', 'Spring', 'Hibernate', 'MySQL']
@@ -71,8 +71,10 @@ class ProjectsGallery extends Component {
                   <div className="desc-container">
                     <div className="project-name underline-project-name">{p.name}</div>
                     <div className="tech-stack">{p.techStack.join(' / ')}</div>
-                    <a href={p.repository} className="project-repo" target="_blank" rel="noopener noreferrer">See repository</a>
+                    {p.repository && <a href={p.repository} className="project-repo" target="_blank" rel="noopener noreferrer">See repository</a>}
                     <div className="project-desc">{p.desc}</div>
+                    {p.demo && <a href={p.demo} className="project-demo" target="_blank" rel="noopener noreferrer">DEMO</a>}
+
                   </div>
                 </div>
 
