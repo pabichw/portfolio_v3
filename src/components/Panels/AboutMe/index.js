@@ -25,7 +25,7 @@ class AboutMe extends Component {
     };
 
     render() {
-      const { facts, technologies } = this.state;
+      const { facts } = this.state;
         return (
           <div id="aboutMe" className="about-me-panel-wrapper scroll-container">
             <div className="about-me-top-container">

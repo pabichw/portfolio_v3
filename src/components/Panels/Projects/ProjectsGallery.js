@@ -3,7 +3,7 @@ import '../../../style/panels/projects/projectsGallery.scss';
 
 // const twitchCloneVideo = require('../../../resources/videos/twitch-clone-demo.mp4');
 const canteenVideo = require('../../../resources/videos/canteen_all.mp4');
-const spedtitionVideo = require('../../../resources/videos/spedition.mp4');
+// const spedtitionVideo = require('../../../resources/videos/spedition.mp4');
 const gdzieJestMeczImg = require('../../../resources/images/gdzie_jest_mecz.png');
 
 //TODO: [ Firefox] bugged widths on videos
