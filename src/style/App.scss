@@ -1,0 +1,59 @@
+$primary-color: #1b3e1b;
+$secondary-color: #1b3e1b;
+$secondary-color-highlighted: #236123;
+
+$bckg-color: #FFF;
+$font-color: #101b0f;
+
+$primary-font-color: #836E00;
+$menu-mobile-background: rgba(20,31,46,0.67);
+
+$gray: #707070;
+$gray2: #8e8e8e;
+$gold: #a18c00;
+$white: #fff;
+$white2: #E0E0E0;
+$white3: #F2F2F2;
+$darkgreen: #1b3e1b;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display');
+
+$openSans: 'Open Sans', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+$playFair: 'Playfair', serif;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  font-family: $montserrat;
+  font-weight: 300;
+  color: $font-color;
+  background: $bckg-color;
+  cursor: default;
+}
+
+.scroll-container {
+  max-width: 100%;
+  min-height:100vh;
+  overflow: auto;
+}
+
+footer {
+  color: $white2;
+  font-size: 13px;
+  bottom: 5px;
+  text-align: center;
+  position: relative;
+
+}
+
+.line {
+  position: relative;
+  margin: 0 auto;
+  bottom: 20px;
+  width: 80vw;
+  border-top: solid 1px $white2;
+}

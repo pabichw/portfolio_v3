@@ -1,0 +1,141 @@
+@import "../../App";
+
+.home-panel-wrapper {
+  height: 100vh;
+  background: $bckg-color;
+}
+#video-bckg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#video-placeholder {
+  position: absolute;
+}
+.video-wrapper {
+  position:absolute;
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+}
+.video-filter {
+  position: absolute;
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+}
+.home-text-wrapper {
+  text-align: center;
+  margin-top: 25vh;
+  transform: translateY(50%);
+  animation: fadeIn 1s ease-in;
+}
+.underline-welcome-text {
+  text-decoration: none;
+  position: relative;
+}
+.underline-welcome-text:after {
+  position: absolute;
+  height: 1px;
+  margin: 0 auto;
+  content: '';
+  left: 0;
+  right: 0;
+  width: 50%;
+  background-color: $gray;
+  bottom: -30px;
+
+  animation: expandSideways 2s cubic-bezier(.37,.9,0,1.01);
+}
+.scroll-down-incent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20px;
+  text-align: center;
+  color: $white3;
+}
+.scroll-down-incent:hover {
+  cursor: pointer;
+  color: #fff;
+}
+.scroll-down-incent-icon {
+  margin: 0 20px;
+  height: 1.3em;
+  width: 1.9em;
+}
+.scroll-down-incent-text {
+}
+.resume-button-wrapper {
+  margin-top: 30px;
+}
+
+h4 {
+  font-size: 0.8em;
+  font-weight: 300;
+  font-family: $openSans;
+  animation: glow 2s cubic-bezier(.37,.9,0,1.01);
+
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 5px;
+  animation: fadeIn 1s ease-in;
+  color: $white2;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 10px;
+  margin: 18px 0;
+  animation: fadeIn 1s ease-in;
+  color: $white;
+}
+
+@media screen and (max-width: 700px) {
+  .home-text-wrapper {
+    margin-top: 16vh;
+  }
+  .resume-button-wrapper {
+    margin-top: 25px;
+  }
+  h4{
+    width: 150px;
+  }
+  h3{
+    font-size: 12px;
+  }
+  h1{
+    font-size: 25px;
+    margin-top: 18px;
+    margin-bottom: 17px;
+  }
+}
+@keyframes fadeIn {
+   0% {
+     opacity: 0;
+   } 100% {
+       opacity: 1;
+     }
+}
+@keyframes glow {
+  100% {
+    color: red;
+  }
+}
+@keyframes expandSideways {
+  0% {
+    width: 0%;
+  } 100% {
+    width: 50%;
+  }
+}

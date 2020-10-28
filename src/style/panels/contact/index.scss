@@ -1,0 +1,70 @@
+@import '../../App';
+
+.contact-panel-wrapper{
+  height: 100vh;
+  background: $bckg-color
+}
+.am-i-opened-wrapper{
+  margin: 0 auto;
+  padding-top: 200px;
+  text-align: center;
+  width: 70%;
+}
+.underline-am-i-opened {
+  text-decoration: none;
+  position: relative;
+}
+.underline-am-i-opened:after {
+  position: absolute;
+  height: 1px;
+  margin: 0 auto;
+  content: '';
+  left: 0;
+  right: 0;
+  width: 50%;
+  background-color: $gray;
+  bottom: -10px;
+}
+.answer{
+  font-size: 2.5em;
+  padding-top: 50px;
+}
+.ending-wrapper{
+  text-align: center;
+
+  top: 50vh;
+  text-decoration: none;
+  position: relative;
+}
+.email {
+  color: $gold;
+  animation: goldGlow 1s ease-in-out infinite alternate forwards;
+}
+.ending-wrapper:before {
+  position: absolute;
+  height: 1px;
+  margin: 0 auto;
+  content: '';
+  left: 0;
+  right: 0;
+  width: 30%;
+  background-color: $gray;
+  bottom: 100px;
+}
+.ending-wrapper:after {
+  position: absolute;
+  height: 1px;
+  margin: 0 auto;
+  content: '';
+  left: 0;
+  right: 0;
+  width: 30%;
+  background-color: $gray;
+  top: 100px;
+}
+
+@keyframes goldGlow {
+  100% {
+    color: #ccb600
+  }
+}

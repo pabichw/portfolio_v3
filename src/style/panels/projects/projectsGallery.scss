@@ -1,0 +1,97 @@
+@import '../../App';
+
+.project-number{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border: solid $primary-color 3px;
+  font-size: 30px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+.preview-number{
+  display: flex;
+}
+.project-number-wrapper{
+  display: flex;
+}
+.to-the-right{
+  justify-content: flex-end;
+}
+.preview-desc-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row-reverse{
+  flex-direction: row-reverse;
+}
+.projects-list-wrapper{
+  text-align: center;
+}
+.project-video{
+  width: 50%;
+  height: auto;
+}
+.desc-container{
+  margin: 0 25px;
+}
+.project-img{
+  margin: 0 auto;
+  height: 500px;
+}
+.project-name{
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+.underline-project-name{
+  text-decoration: none;
+  position: relative;
+}
+.underline-project-name:after{
+  position: absolute;
+  height: 1px;
+  margin: 0 auto;
+  content: '';
+  left: 0;
+  right: 0;
+  width: 50%;
+  background-color: $gray2;
+  bottom: -5px;
+
+  animation: expandSideways 2s cubic-bezier(.37,.9,0,1.01);
+}
+.tech-stack {
+  font-size: 0.9em;
+  color: $gray2;
+  margin-bottom: 10px;
+}
+.project-repo{
+  text-align: center;
+  cursor: pointer;
+
+  color: $secondary-color;
+  font-weight: bold;
+}
+.project-repo:hover{
+  color: $secondary-color-highlighted;
+}
+
+@media screen and (max-width: 700px) {
+  .project-video{
+    width: 100%;
+  }
+  .preview-desc-container{
+    display:block;
+  }
+  .desc-container{
+    margin-top: 25px;
+  }
+  .project-number-wrapper{
+    display: block;
+  }
+}

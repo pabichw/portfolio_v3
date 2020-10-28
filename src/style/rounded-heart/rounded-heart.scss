@@ -1,0 +1,31 @@
+@import '../App';
+
+.wrapper {
+  height: 114px;
+  width: 114px;
+  border: solid 3px $darkgreen;
+  border-radius: 50%;
+}
+
+.heart {
+  color: darkred;
+  padding: 35px;
+  font-size: 2em;
+  animation: hearbeat 1s infinite;
+  animation-name: heartbeat;
+  animation-duration: 1s;
+
+  animation-iteration-count: infinite;
+  animation-delay: 3s;
+}
+
+@keyframes heartbeat{
+  0%{
+    transform: scale(1);
+  }40%{
+     transform: scale(1.1);
+     color: #a00;
+   }100%{
+      transform: scale(1);
+    }
+}

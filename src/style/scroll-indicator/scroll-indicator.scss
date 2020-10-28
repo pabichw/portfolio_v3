@@ -1,0 +1,55 @@
+@import '../App';
+
+.scroll-indicator-wrapper {
+  position: fixed;
+  right: 15px;
+  width: 150px;
+  z-index: 998;
+
+  top: 50%;
+  transform: translateY(-50%);
+  color: $gray2;
+
+  display: flex;
+  justify-content: flex-end;
+}
+.active-screen-label {
+  text-align: right;
+  margin-right: 18px;
+}
+.dots {
+  transform: translateY(5px);
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: $gray2;
+  border-radius: 50%;
+
+  margin-bottom: 20px;
+}
+
+.dot-active {
+  opacity: 1;
+}
+
+.dot-inactive {
+  opacity: 0.4;
+}
+
+@media screen and (max-width: 700px) {
+  .active-screen-label {
+    transform: rotateZ(90deg);
+    margin-top: 8px;
+    margin-right: 25px;
+  }
+  .scroll-indicator-wrapper {
+    font-size: 16px;
+  }
+  .dot {
+    width: 6px;
+    height: 6px;
+
+  }
+}
+
