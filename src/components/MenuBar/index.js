@@ -25,12 +25,12 @@ class MenuBar extends Component {
     return (
       <>
         <div className={isFree ? 'hidden' : 'shown'}/>
-        <ProgressBar/>
         <div className={"menubar-wrapper ".concat(isFree ? "menubar-free" : "menubar-sticked")}>
           <div className="dummy"/>
           <Nav/>
           <SocialMediaIcons/>
         </div>
+        <ProgressBar/>
       </>
     );
   }
