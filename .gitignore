@@ -14,7 +14,7 @@
 # style
 /.sass-cache
 *.css
-.css.map
+*.css.map
 
 # misc
 .DS_Store

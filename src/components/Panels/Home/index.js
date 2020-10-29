@@ -27,8 +27,8 @@ class HomePanel extends Component {
 
     const video = videoSrc && !isIOS
       ?
-      <video id="video-bckg" playsInline autoPlay muted loop>
-        <source src = {videoSrc} type="video/mp4" />
+      <video id="video-bckg" playsinline autoPlay muted loop>
+        <source src={videoSrc} type="video/mp4" />
       </video>
       : <img id="video-placeholder" src={tree_dummy_mobile} alt="video-placeholder"/>;
 
