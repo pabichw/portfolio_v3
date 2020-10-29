@@ -46,8 +46,8 @@ $navbar-font-color-home: $white2;
 }
 .burger-ico{
   display: none;
-  height: 45px;
-  width: 45px;
+  height: 35px;
+  width: 35px;
 }
 a {
   text-decoration: none;
@@ -70,8 +70,8 @@ a {
 @media screen and (max-width: 700px) {
   .burger-ico{
     display: block;
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     z-index: 999;
   }
   .nav-wrapper {

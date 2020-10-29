@@ -34,7 +34,6 @@
 }
 .project-video{
   width: 50%;
-  height: auto;
 }
 .desc-container{
   margin: 0 25px;
@@ -48,7 +47,10 @@
 }
 .project-img{
   margin: 0 auto;
-  height: 500px;
+  max-height: 500px;
+}
+.project-vid{
+
 }
 .project-name{
   margin-bottom: 10px;
