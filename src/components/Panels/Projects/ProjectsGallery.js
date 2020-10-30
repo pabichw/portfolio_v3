@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../../../style/panels/projects/projectsGallery.scss';
 
-// const twitchCloneVideo = require('../../../resources/videos/twitch-clone-demo.mp4');
+const twitchCloneVideo = require('../../../resources/videos/twitch-clone.mp4');
 const canteenVideo = require('../../../resources/videos/canteen_all.mp4');
 // const spedtitionVideo = require('../../../resources/videos/spedition.mp4');
 const gdzieJestMeczImg = require('../../../resources/images/gdzie_jest_mecz.png');
@@ -14,7 +14,7 @@ class ProjectsGallery extends Component {
       {
         name: 'Twitch clone',
         desc: 'Twitch.tv rip off based on Twitch Dev API.\nI wanted to see how far I can go with making 1:1 twitch clone using publicly available API. Turns out not so far :)\nFor this project I also created simple, proxy-like API to send my requests through',
-        video: null,
+        video: twitchCloneVideo,
         repository: 'https://github.com/pabichw/twitch-clone',
         demo: 'https://twitch.pabich.cc',
         techStack: ['React', 'Typescript', 'Redux', 'Node (for API)']
