@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../../../style/panels/projects/projectsGallery.scss';
+import Fade from 'react-reveal/Fade';
 
 const twitchCloneVideo = require('../../../resources/videos/twitch-clone.mp4');
 const canteenVideo = require('../../../resources/videos/canteen_all.mp4');
@@ -55,30 +56,35 @@ class ProjectsGallery extends Component {
         <div>
           {projects.map((p, idx) => {
             return(
-              <section className="project-item" key={idx}>
-                <div className={"project-number-wrapper ".concat(idx % 2 === 0 ? '' : 'to-the-right')}>
-                  <div className="project-number">{idx + 1}</div>
-                </div>
-                <div className={"preview-desc-container ".concat(idx % 2 === 0 ? '' : "row-reverse")}>
-                  {p.video?
-                    <video className="project-video" controls>
-                      <source src={p.video} type="video/mp4"/>
-                      Your browser doesn't support video players ;( Just... use Chrome for god sake - it's year 2019.
-                    </video>
-                    :
-                    <img className="project-img" alt="project-preview" src={p.img}/>
-                  }
-                  <div className="desc-container">
-                    <div className="project-name underline-project-name">{p.name}</div>
-                    <div className="tech-stack">{p.techStack.join(' / ')}</div>
-                    {p.repository && <a href={p.repository} className="project-repo" target="_blank" rel="noopener noreferrer">See repository</a>}
-                    <div className="project-desc">{p.desc}</div>
-                    {p.demo && <a href={p.demo} className="project-demo" target="_blank" rel="noopener noreferrer">DEMO</a>}
-
+              <Fade bottom>
+                <section className="project-item" key={idx}>
+                  <div className={"project-number-wrapper ".concat(idx % 2 === 0 ? '' : 'to-the-right')}>
+                    <div className="project-number">{idx + 1}</div>
                   </div>
-                </div>
-
-              </section>
+                  <div className={"preview-desc-container ".concat(idx % 2 === 0 ? '' : "row-reverse")}>
+                    <Fade left={idx % 2 === 0} right={idx % 2 !== 0}>
+                    {p.video?
+                      <video className="project-video" controls>
+                        <source src={p.video} type="video/mp4"/>
+                        Your browser doesn't support video players ;( Just... use Chrome for god sake - it's year 2019.
+                      </video>
+                      :
+                      <img className="project-img" alt="project-preview" src={p.img}/>
+                    }
+                    </Fade>
+                    <Fade right={idx % 2 === 0} left={idx % 2 !== 0}>
+  
+                    <div className="desc-container">
+                      <div className="project-name underline-project-name">{p.name}</div>
+                      <div className="tech-stack">{p.techStack.join(' / ')}</div>
+                      {p.repository && <a href={p.repository} className="project-repo" target="_blank" rel="noopener noreferrer">See repository</a>}
+                      <p className="project-desc">{p.desc}</p>
+                      {p.demo && <a href={p.demo} className="project-demo" target="_blank" rel="noopener noreferrer">DEMO</a>}
+                    </div>
+                    </Fade>
+                  </div>
+                </section>
+              </Fade>
             )
           })}
         </div>

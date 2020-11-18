@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import '../../../style/panels/home/index.scss';
 import CallToActionButton from "../../Buttons/CallToActionButton";
 import {MobileUtils} from "../../../utils/MobileUtils";
+import Fade from 'react-reveal/Fade';
 
 const arrowDown = require('../../../resources/images/arrow-down.png');
 const videoPath = require('../../../resources/videos/tree.mp4');
@@ -39,12 +40,18 @@ class HomePanel extends Component {
           <div className="video-filter"/>
         </div>
         <header className="home-text-wrapper">
-          <h3>Hello there</h3>
-          <h1>I'M WIKTOR</h1>
-          <h3>a<br/>front-end developer</h3>
-          <div className="resume-button-wrapper">
-            <CallToActionButton text="See my LinkedIn" icon={<i className="far fa-id-card"/>} action={() => window.location.href = linkedInUrl}/>
-          </div>
+          <Fade top>
+            <h3>Hello there</h3>
+          </Fade>
+          <Fade>
+            <h1>I'M WIKTOR</h1>
+          </Fade>
+          <Fade bottom>
+            <h3>a<br/>front-end developer</h3>
+            <div className="resume-button-wrapper">
+              <CallToActionButton text="See my LinkedIn" icon={<i className="far fa-id-card"/>} action={() => window.location.href = linkedInUrl}/>
+            </div>
+          </Fade>
         </header>
         <a href="#aboutMe" className="scroll-down-incent">
           <img alt="arrow down icon" src={arrowDown} className='scroll-down-incent-icon'/>

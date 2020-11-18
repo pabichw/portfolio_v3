@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../../../style/panels/projects/index.scss';
 import ProjectsGallery from "./ProjectsGallery";
+import Fade from 'react-reveal/Fade';
 
 class ProjectsPanel extends Component {
 
@@ -55,11 +56,14 @@ class ProjectsPanel extends Component {
     return (
       <main id="projects" className="projects-panel-wrapper" >
         <article className="introduction">
-          <h2 className='section-title'>Projects:</h2>
-          <p>Although, I have (almost) no commercial experience I try to spend as much time as
-            I can making my own projects in order to self-develop. Also I was a Lodz University of Technology student, so I had to make some
-            projects for grades whether I like It or not ;) I have listed a few below.
-          </p>
+          <Fade top>
+            <h2 className='section-title'>Projects:</h2>
+          </Fade>
+          <Fade bottom>
+            <p>Although, I have only about 1.5 yr of commercial experience I try to spend some time
+              doing my own projects in order to self-develop. I have listed a few below.
+            </p>
+          </Fade>
         </article>
         <ProjectsGallery/>
       </main>

@@ -3,6 +3,7 @@ import Nav from "./Nav";
 import SocialMediaIcons from "./SocialMediaIcons";
 import '../../style/menubar/menubar.scss';
 import ProgressBar from "../ProgressBar";
+import Fade from 'react-reveal/Fade'
 
 class MenuBar extends Component {
 
@@ -28,7 +29,9 @@ class MenuBar extends Component {
         <div className={"menubar-wrapper ".concat(isFree ? "menubar-free" : "menubar-sticked")}>
           <div className="dummy"/>
           <Nav/>
-          <SocialMediaIcons/>
+          <Fade>
+            <SocialMediaIcons/>
+          </Fade>
         </div>
         <ProgressBar/>
       </>

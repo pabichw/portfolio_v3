@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../../../style/panels/about-me/index.scss';
 import RoundedHeart from '../../RoundedHeart/index';
+import Fade from 'react-reveal/Fade';
 
 const jsIco = require('../../../resources/images/js_ico_dark.png');
 const reactIco = require('../../../resources/images/react_ico_dark.png');
@@ -29,19 +30,23 @@ class AboutMe extends Component {
         return (
           <div id="aboutMe" className="about-me-panel-wrapper scroll-container">
             <div className="about-me-top-container">
-              <h3 className="facts-title">Some facts about me:</h3>
-              <ul className="facts-wrapper">
-                {facts.map((fact, idx) => {
-                  return (
-                    <li key={idx} className="fact">
-                      {fact.ico}
-                      <div className={"fact-label"}>
-                        {fact.label}
-                      </div>
-                    </li>
-                  )
-                })}
-              </ul>
+              <Fade top>
+                <h3 className="facts-title">Some facts about me:</h3>
+              </Fade>
+              <Fade bottom cascade>
+                <ul className="facts-wrapper">
+                  {facts.map((fact, idx) => {
+                    return (
+                      <li key={idx} className="fact">
+                        {fact.ico}
+                        <div className={"fact-label"}>
+                          {fact.label}
+                        </div>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </Fade>
             </div>
             {/*<div className="about-me-bottom-container">*/}
             {/*  <h3 className="technologies-label">Some technologies I work with:</h3>*/}

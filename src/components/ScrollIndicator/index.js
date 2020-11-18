@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import '../../style/scroll-indicator/scroll-indicator.scss';
 import {Metrics} from "../../utils/Metrics";
 import {MobileUtils} from "../../utils/MobileUtils";
+import Fade from 'react-reveal/Fade';
 
 class ScrollIndicator extends Component {
 
@@ -74,15 +75,16 @@ class ScrollIndicator extends Component {
         activeScreenIndex + " " + activeScreen.name;
 
     return (
-      <div className="scroll-indicator-wrapper">
-        <div className="active-screen-label" style={isMobile? null: {marginTop: activeScreenIndex * 30 + 'px'}}>{labelToDisplay}</div>
-        <div className="dots">
-          {screens.map((screen, idx) => {
-            return <a key={idx} href={'#' + screen.anchorID} onClick={() => this._handleDotClick(screen)}><div className={"dot ".concat(idx === activeScreenIndex ? "dot-active" : "dot-inactive")}/></a>
-          })}
-
+      <Fade right>
+        <div className="scroll-indicator-wrapper">
+          <div className="active-screen-label" style={isMobile? null: {marginTop: activeScreenIndex * 30 + 'px'}}>{labelToDisplay}</div>
+          <div className="dots">
+            {screens.map((screen, idx) => {
+              return <a key={idx} href={'#' + screen.anchorID} onClick={() => this._handleDotClick(screen)}><div className={"dot ".concat(idx === activeScreenIndex ? "dot-active" : "dot-inactive")}/></a>
+            })}
+          </div>
         </div>
-      </div>
+      </Fade>
     );
   }
 }
