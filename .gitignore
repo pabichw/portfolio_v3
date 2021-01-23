@@ -36,5 +36,8 @@ yarn.lock
 # Next.js
 /.next
 
+# build
+/out
+
 #IDE
 /.idea
