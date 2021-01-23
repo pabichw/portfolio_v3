@@ -3,7 +3,7 @@ const path = require('path')
 
 module.exports = withSass({
     webpack: (config, {dir, dev, isServer, buildId, defaultLoaders}) => {
-        config.resolve.modules.push(path.resolve('./'))
+        config.resolve.modules.push(path.resolve('./src'))
         return config
     }
 })
