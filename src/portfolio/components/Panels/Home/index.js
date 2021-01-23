@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import '../../../../styles/panels/home/index.scss';
 import CallToActionButton from "../../Buttons/CallToActionButton";
-import Image from 'next/image'
 import {MobileUtils} from "../../../../utils/MobileUtils";
 import Fade from 'react-reveal/Fade';
 
@@ -33,7 +32,7 @@ class HomePanel extends Component {
       <video id="video-bckg" playsinline autoPlay muted loop>
         <source src={videoPath} type="video/mp4" />
       </video>
-      : <Image id="video-placeholder" src={tree_dummy_mobile} alt="video-placeholder"/>;
+      : <img id="video-placeholder" src={tree_dummy_mobile} alt="video-placeholder"/>;
 
     return (
       <div id="home" className="home-panel-wrapper scroll-container">
