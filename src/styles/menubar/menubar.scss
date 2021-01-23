@@ -1,0 +1,90 @@
+@import '../../styles/App';
+
+
+.menubar-wrapper{
+  display: flex;
+  font-size: 1.1em;
+  font-family: $montserrat;
+  font-weight: 300;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
+}
+.menubar-free{
+  padding-top: 97px;
+  animation: animateTopbarMakeFree 0.3s ease, dipToTransparent 0.3s ease forwards;
+}
+.menubar-sticked{
+  padding-top: 20px;
+  font-size: 0.9em;
+  animation: animateTopbarMakeSticked 0.3s ease, dipToBlack 0.3s ease forwards;
+}
+.dummy{
+  width: 100px;
+}
+.hidden{
+  visibility: hidden;
+}
+.shown{
+  visibility: visible;
+  animation: fadeIn 0.5s 1s;
+}
+@media screen and (max-width: 700px) {
+  .menubar-wrapper{
+    margin: 0 auto;
+    padding: 15px 8px;
+  }
+
+  .menubar-sticked{
+    animation: none;
+  }
+
+  .menubar-free{
+    animation: none;
+  }
+}
+@keyframes animateTopbarMakeSticked {
+  0% {
+    padding-top: 97px;
+    font-size: 1.1em;
+  }
+  100% {
+    padding-top: 20px;
+    font-size: 0.9em;
+  }
+}
+@keyframes animateTopbarMakeFree {
+  100% {
+    padding-top: 97px;
+    font-size: 1.1em;
+  }
+  0% {
+    padding-top: 20px;
+    font-size: 0.9em;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+  } 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dipToBlack {
+  0% {
+    background: transparent;
+  } 100% {
+      background: black;
+    }
+}
+
+@keyframes dipToTransparent {
+  0% {
+    background: black;
+  } 100% {
+      background: transparent;
+  }
+}
