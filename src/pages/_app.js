@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
-import {pageview} from "@/utils/gtag";
+import {pageview} from "@/utils/GTag";
 import '../styles/App.scss';
 
 const App = ({ Component, pageProps }) => {
