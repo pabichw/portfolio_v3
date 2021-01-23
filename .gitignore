@@ -16,6 +16,8 @@
 *.css
 *.css.map
 *.scssc
+*.sass-cache
+**.sass-cache**
 
 # misc
 .DS_Store
