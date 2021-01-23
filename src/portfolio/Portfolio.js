@@ -6,20 +6,18 @@ import Projects from "./components/Panels/Projects";
 import Contact from "./components/Panels/Contact";
 import ScrollIndicator from "./components/ScrollIndicator";
 
-class Portfolio extends Component {
-  state = {
-    rootTitle: 'pabich.cc - ',
-    titles: [
-      'will code for food',
-      'will code for money',
-      'hire me, I have no job',
-      'null pointer exception',
-      'did you know, that an african bush elephant can weight up to 6000kg?'
-    ]
-  };
+const rootTitle = 'pabich.cc - ';
 
+const titles = [
+  'will code for food',
+  'will code for money',
+  'hire me, I have no job',
+  'null pointer exception',
+  'did you know, that an african bush elephant can weight up to 6000kg?'
+]
+
+class Portfolio extends Component {
   _changeTitle = () => {
-    const { rootTitle , titles } = this.state;
     const idx = Math.floor(Math.random() * titles.length);
 
     const newTitle = rootTitle + titles[idx];

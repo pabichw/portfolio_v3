@@ -74,6 +74,15 @@ h3 {
   margin: 0 auto;
 }
 
+.facts-title {
+  margin-bottom: 1.1rem;
+}
+
+.fact-label {
+  margin-top: 1rem;
+  line-height: 1.4rem;
+}
+
 @media screen and (max-width: 600px) {
   .about-me-top-container {
     display: block;

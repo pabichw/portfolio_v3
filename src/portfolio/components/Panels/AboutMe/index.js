@@ -37,7 +37,7 @@ class AboutMe extends Component {
                 return (
                   <li key={idx} className="fact">
                     {fact.ico}
-                    <div className={"fact-label"}>
+                    <div className="fact-label">
                       {fact.label}
                     </div>
                   </li>

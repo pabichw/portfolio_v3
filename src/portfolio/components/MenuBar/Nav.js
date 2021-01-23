@@ -42,6 +42,10 @@ class Nav extends Component {
    componentDidMount() {
     window.addEventListener('resize', this._handleResize);
     window.addEventListener('scroll', this._handleScroll);
+
+    this.setState({
+      isMobile: MobileUtils.isDeviceMobile()
+    })
   }
 
   render() {
