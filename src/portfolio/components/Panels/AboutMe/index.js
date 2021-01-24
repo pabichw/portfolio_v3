@@ -27,7 +27,7 @@ class AboutMe extends Component {
   render() {
     return (
       <div id="aboutMe" className="about-me-panel-wrapper scroll-container">
-        <div className="about-me-top-container">
+        <article className="about-me-top-container">
           <Fade top>
             <h3 className="facts-title">Some facts about me:</h3>
           </Fade>
@@ -45,7 +45,7 @@ class AboutMe extends Component {
               })}
             </ul>
           </Fade>
-        </div>
+        </article>
         {/*<div className="about-me-bottom-container">*/}
         {/*  <h3 className="technologies-label">Some technologies I work with:</h3>*/}
         {/*  <div className="technologies-wrapper">*/}
