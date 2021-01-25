@@ -2,11 +2,12 @@
 
 $navbar-font-color-home: $white2;
 
-.nav-wrapper {
+.nav-wrapper > div  {
   display: flex;
   justify-content: center;
   margin-left: 20px;
   font-family: $openSans;
+  cursor: pointer;
 }
 .tab {
   margin: 4px 20px;

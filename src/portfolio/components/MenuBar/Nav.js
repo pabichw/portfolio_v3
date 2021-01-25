@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Link from 'next/link'
 import '../../../styles/menubar/nav.scss';
 import {MobileUtils} from "../../../utils/MobileUtils";
 
@@ -8,10 +9,11 @@ const xIco = "/static/images/x_ico_white.svg";
 const xIcoDark = "/static/images/x_ico_black.svg";
 
 const tabs = [
-  {name: "home", anchor: '#home'},
-  {name: "about me", anchor: '#aboutMe'},
-  {name: "projects", anchor: '#projects'},
-  {name: "contact", anchor: '#contact'}
+  {name: "home", anchor: '/'},
+  {name: "about me", anchor: '/#aboutMe'},
+  {name: "projects", anchor: '/#projects'},
+  {name: "contact", anchor: '/#contact'},
+  {name: "blog", anchor: '/blog'}
 ]
 
 class Nav extends Component {
@@ -66,13 +68,13 @@ class Nav extends Component {
         />
         <div className={isMobile? (isCollapsed ? 'side-menu-container-hidden':'side-menu-container-shown') : ''}>
           {tabs.map((tab, i) => 
-            <a key={i}
-                className={"tab white-font"}
-                onClick={this._handleTabOnClick}
+            <Link key={i}
                 href={tab.anchor}
             >
-              {tab.name}
-            </a>
+              <p className={"tab white-font"}>
+                {tab.name}
+              </p>
+            </Link>
           )}
         </div>
       </nav>

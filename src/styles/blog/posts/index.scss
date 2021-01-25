@@ -1,0 +1,44 @@
+@import '../../App.scss';
+
+.breadcrumb {
+    margin-bottom: 0.5rem;
+    a {
+        color: $primary-font-color;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    :hover {
+        color: $gold;
+    }
+}
+
+.post-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 8rem;
+}
+
+.post-container__article {
+    width: 100%;
+}
+
+.article__featured-image-wrapper {
+    width: 100%;
+    height: 500px;
+    background: #e0e0e0;
+    margin-bottom: 2rem;
+
+    img {
+        height: 100%;
+    }
+}
+
+.article__title { 
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.article__content {
+    line-height: 1.7rem;
+}
