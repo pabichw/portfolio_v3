@@ -6,7 +6,6 @@ import ProgressBar from "../ProgressBar";
 import Fade from 'react-reveal/Fade'
 
 class MenuBar extends Component {
-
   state = {
     isFree: true,
   };
@@ -18,15 +17,27 @@ class MenuBar extends Component {
   };
 
   componentDidMount(){
-    window.addEventListener('scroll', this._handleOnScroll);
+    const {alwaysStick} = this.props;
+
+    if(!alwaysStick) {
+      window.addEventListener('scroll', this._handleOnScroll);
+    }
+  }
+
+  componentWillUnmount(){
+    window.removeEventListener('scroll', this._handleOnScroll, true);
   }
 
   render() {
     const {isFree} = this.state;
+    const {alwaysStick} = this.props;
+
+    const __isFree = alwaysStick ? false : isFree;
+
     return (
       <>
-        <div className={isFree ? 'hidden' : 'shown'}/>
-        <div className={"menubar-wrapper ".concat(isFree ? "menubar-free" : "menubar-sticked")}>
+        <div className={__isFree ? 'hidden' : 'shown'}/>
+        <div className={"menubar-wrapper ".concat(__isFree ? "menubar-free" : "menubar-sticked")}>
           <div className="dummy"/>
           <Nav/>
           <Fade>
@@ -38,7 +49,5 @@ class MenuBar extends Component {
     );
   }
 }
-
-MenuBar.propTypes = {};
 
 export default MenuBar;

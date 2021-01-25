@@ -9,7 +9,7 @@ class MyDocument extends Document {
       }
 
     render() {
-        return (
+      return (
           <Html lang={this.props.lang || "en"}>
             <Head>
               <title>{'Frontend Developer with strong focus on React and React Native. Based in Lodz but willing to work remotely 🙃'}</title>
