@@ -48,7 +48,12 @@ class Nav extends Component {
     this.setState({
       isMobile: MobileUtils.isDeviceMobile()
     })
-  }
+   }
+
+   componentWillUnmount() {
+    window.removeEventListener('resize', this._handleResize);
+    window.removeEventListener('scroll', this._handleScroll);
+   }
 
   render() {
     const {isCollapsed, isMobile, isAfterHomePanel} = this.state;

@@ -46,14 +46,16 @@ const AboutMe = ({postsData}) => {
             )}
           </ul>
         </Fade>
-        <section class="blog-section__container">
-          <h3>Check out my recent blog posts: </h3>
-          <ul>
-            {postsData?.posts?.map(post => <PostThumbnail key={`post-${post.id}`} data={post} />)}
-            {postsData?.error && <p className="error-text">{`Couldn't get posts ;(`}</p>}
-          </ul>
-          <Link href="/blog">All Posts</Link>
-        </section>
+        <Fade bottom>
+          <section class="blog-section__container">
+            <h3>Check out my recent blog posts: </h3>
+            <ul>
+              {postsData?.posts?.map(post => <PostThumbnail key={`post-${post.id}`} data={post} />)}
+              {postsData?.error && <p className="error-text">{`Couldn't get posts ;(`}</p>}
+            </ul>
+            <Link href="/blog" class="container__link">All Posts</Link>
+          </section>
+        </Fade>
       </article>
       {/*<div className="about-me-bottom-container">*/}
       {/*  <h3 className="technologies-label">Some technologies I work with:</h3>*/}

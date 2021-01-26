@@ -51,7 +51,7 @@ class ProjectsGallery extends Component {
               <Fade bottom>
                 <section className="project-item" key={idx}>
                   <div className={"project-number-wrapper ".concat(idx % 2 === 0 ? '' : 'to-the-right')}>
-                    <div className="project-number">{idx + 1}</div>
+                    {/* <div className="project-number">{idx + 1}</div> */}
                   </div>
                   <div className={"preview-desc-container ".concat(idx % 2 === 0 ? '' : "row-reverse")}>
                     <Fade left={idx % 2 === 0} right={idx % 2 !== 0}>
