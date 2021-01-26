@@ -5,7 +5,6 @@ $navbar-font-color-home: $white2;
 .nav-wrapper > div  {
   display: flex;
   justify-content: center;
-  margin-left: 20px;
   font-family: $openSans;
   cursor: pointer;
 }
@@ -54,7 +53,7 @@ a {
   text-decoration: none;
 }
 .side-menu-container-hidden{
-  display: none;
+  display: none !important;
 }
 .side-menu-container-shown{
   display: block;
@@ -74,9 +73,16 @@ a {
     height: 35px;
     width: 35px;
     z-index: 999;
+    position: absolute;
   }
   .nav-wrapper {
     top: 0;
+
+    div {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 5rem;
+    }
   }
   .tab{
     display: block;

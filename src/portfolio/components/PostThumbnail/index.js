@@ -13,9 +13,9 @@ const PostThumbnail = ({data}) => {
     return (
         <Link href={`/blog/posts/${data.slug}`}>
         <div className="post-thumb__container">
-            <div className="post-thumb__img-container">
-                <img alt={`post-thumb-${data.title}`} src={featuredImage?.node.sourceUrl}/>
-            </div>
+            <div className="post-thumb__img-container" style={{background: `url(${featuredImage?.node.sourceUrl})`}}/>
+                {/* <img alt={`post-thumb-${data.title}`} src={featuredImage?.node.sourceUrl}/>
+            </div> */}
             <h4 className="post-thumb__title">{data.title}</h4>
             <p className="post-thumb__snippet">{postSnippet}{ellipsis}</p>
         </div>

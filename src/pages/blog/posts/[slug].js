@@ -14,9 +14,9 @@ export default function Post({ post }) {
           <Link href="/blog">{'<< Back'}</Link>
         </div>
         <article className="post-container__article">
-          <div className="article__featured-image-wrapper">
-            <img alt={`featured ${post.featuredImage?.node.sourceUrl}`} src={post.featuredImage?.node.sourceUrl}/>
-          </div>
+          <div className="article__featured-image-wrapper" style={{background: `url(${post.featuredImage?.node.sourceUrl})`}}/>
+            {/* <img alt={`featured ${post.featuredImage?.node.sourceUrl}`} src={post.featuredImage?.node.sourceUrl}/>
+          </div> */}
           <h2 className="article__title">{post.title}</h2>
           <section className="article__content" dangerouslySetInnerHTML={{__html: post.content}}/>
         </article>

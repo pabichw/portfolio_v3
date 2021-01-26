@@ -35,11 +35,11 @@ class ScrollIndicator extends Component {
     let anchorPosNextScreen;
 
     if (prevScreen) {
-      anchorPosPrevScreen = document.getElementById(prevScreen.anchorID).getBoundingClientRect().bottom;
+      anchorPosPrevScreen = document.getElementById(prevScreen.anchorID)?.getBoundingClientRect().bottom;
     }
 
     if (nextScreen) {
-      anchorPosNextScreen = document.getElementById(nextScreen.anchorID).getBoundingClientRect().top + window.scrollY;
+      anchorPosNextScreen = document.getElementById(nextScreen.anchorID)?.getBoundingClientRect().top + window.scrollY;
     }
 
     if (currPosY >= anchorPosNextScreen) {

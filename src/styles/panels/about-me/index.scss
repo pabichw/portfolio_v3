@@ -84,7 +84,8 @@ h3 {
 }
 
 .blog-section__container {
-  margin-top: 3rem;
+  margin: 3rem 2rem 0;
+  max-width: 1200px;
 }
 
 .blog-section__container > ul {
@@ -95,7 +96,13 @@ h3 {
   margin-top: 2rem;
 }
 
-@media screen and (max-width: 600px) {
+.blog-section__container > a {
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 950px) {
   .about-me-top-container {
     display: block;
   }
