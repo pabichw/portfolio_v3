@@ -11,7 +11,7 @@ export default function Blog({ allPostsData }) {
         <main className="blog-container">
             <h2>Blog</h2>
             <section className="blog-container__posts-grid">
-                {allPostsData?.posts?.map(post => <PostThumbnail data={post}/>)}
+                {allPostsData?.posts?.map(post => <PostThumbnail key={`${post.title}-thumb`} data={post}/>)}
             </section>
         </main>
     </>

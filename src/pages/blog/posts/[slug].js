@@ -6,6 +6,10 @@ import '../../../styles/blog/posts/index.scss';
 
 export default function Post({ post }) {
   console.log('post', post)
+  const imgUrl = post.featuredImage?.node.sourceUrl;
+  
+  const imgStyles = imgUrl && bckgStyles(imgUrl);
+
   return (
     <>
       <Menu alwaysStick/>
@@ -14,7 +18,7 @@ export default function Post({ post }) {
           <Link href="/blog">{'<< Back'}</Link>
         </div>
         <article className="post-container__article">
-          <div className="article__featured-image-wrapper" style={{background: `url(${post.featuredImage?.node.sourceUrl})`}}/>
+          <div className="article__featured-image-wrapper" style={imgStyles}/>
             {/* <img alt={`featured ${post.featuredImage?.node.sourceUrl}`} src={post.featuredImage?.node.sourceUrl}/>
           </div> */}
           <h2 className="article__title">{post.title}</h2>
@@ -24,6 +28,13 @@ export default function Post({ post }) {
     </>
   )
 }
+
+const bckgStyles = url => ({
+  'background': `url(${url})`, 
+  'background-size': 'cover',
+  'background-position': 'center',
+  'background-repeat': 'no-repeat',
+})
 
 const GET_POST_BY_SLUG = slug => gql`
   query GetPostsBySlug {
