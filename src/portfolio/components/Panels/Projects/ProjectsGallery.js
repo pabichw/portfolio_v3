@@ -31,7 +31,7 @@ const projects = [
   },
   {
     name: 'Yours',
-    desc: 'Created at Goodylabs. I was responsible for delivering mobile client for app tailored for managing bookings at coworking spaces.\nUnfortunately this qucik gif is all I have left from this app :/. \n ' + 'Some of the main features are: calendar, support chat, qr code for door opening, listing and inviting collegues to your bookings, managing user profile, etc.',
+    desc: 'Created at Goodylabs. I was responsible for delivering mobile client for app tailored for managing bookings at coworking spaces.\nUnfortunately this qucik gif is all I have left from this app :/. Some of the main features are: calendar, support chat, qr code for door opening, notifications, listing and inviting collegues to your bookings, managing user profile, etc.',
     img: yoursDemoGif,
     repository: null,
     techStack: ['React Native', 'Typescript']
