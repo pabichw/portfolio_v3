@@ -6,6 +6,7 @@ const twitchCloneVideo = '/static/videos/twitch-clone.mp4';
 const canteenVideo = '/static/videos/canteen_all.mp4';
 const spedtitionVideo = '/static/videos/spedition.mp4';
 const gdzieJestMeczImg = '/static/images/gdzie_jest_mecz.png';
+const yoursDemoGif = '/static/images/yours_demo.gif';
 
 //TODO: [ Firefox] bugged widths on videos
 const projects = [
@@ -27,6 +28,13 @@ const projects = [
     video: canteenVideo,
     repository: 'https://github.com/pabichw/canteen',
     techStack: ['React Native', 'Ruby On Rails', 'MongoDB']
+  },
+  {
+    name: 'Yours',
+    desc: 'Created at Goodylabs. I was responsible for delivering mobile client for app tailored for managing bookings at coworking spaces.\nUnfortunately this qucik gif is all I have left from this app :/. \n ' + 'Some of the main features are: calendar, support chat, qr code for door opening, listing and inviting collegues to your bookings, managing user profile, etc.',
+    img: yoursDemoGif,
+    repository: null,
+    techStack: ['React Native', 'Typescript']
   },
   {
     name: 'Cho Na Mecz',
