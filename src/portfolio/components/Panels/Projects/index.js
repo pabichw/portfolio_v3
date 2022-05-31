@@ -60,8 +60,8 @@ class ProjectsPanel extends Component {
             <h2 className='section-title'>Projects:</h2>
           </Fade>
           <Fade bottom>
-            <p>Although, I have only about 1.5 yr of commercial experience I try to spend some time
-              doing my own projects in order to self-develop. I have listed a few below.
+            <p>
+              During my 2.5+ yr of commercial experience I've developed a few fun frontend projects. I have listed a few below. Also, a couple of listed below I made in my spare time.
             </p>
           </Fade>
         </article>

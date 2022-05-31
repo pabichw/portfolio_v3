@@ -1,6 +1,13 @@
 .projects-panel-wrapper{
   padding: 20px 60px;
   min-height: 100vh;
+  
+  .introduction {
+    p {
+      margin-top: 10px;
+      line-height: 1.5rem;
+    }
+  }
 }
 
 .projects-list-wrapper{

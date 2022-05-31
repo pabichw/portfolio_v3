@@ -17,7 +17,8 @@
   animation: animateTopbarMakeFree 0.3s ease, dipToTransparent 0.3s ease forwards;
 }
 .menubar-sticked{
-  padding-top: 20px;
+  padding-top: 12px;
+  padding-bottom: 8px;
   font-size: 0.9em;
   animation: animateTopbarMakeSticked 0.3s ease, dipToBlack 0.3s ease forwards;
 }

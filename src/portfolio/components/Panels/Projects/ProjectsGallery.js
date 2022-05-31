@@ -4,12 +4,26 @@ import Fade from 'react-reveal/Fade';
 
 const twitchCloneVideo = '/static/videos/twitch-clone.mp4';
 const canteenVideo = '/static/videos/canteen_all.mp4';
-const spedtitionVideo = '/static/videos/spedition.mp4';
 const gdzieJestMeczImg = '/static/images/gdzie_jest_mecz.png';
+const kratkiImg = '/static/images/kratki.png';
 const yoursDemoGif = '/static/images/yours_demo.gif';
 
 //TODO: [ Firefox] bugged widths on videos
 const projects = [
+  {
+    name: 'Kratki.com',
+    desc: 'Created at Advox Studio. E-commerce platform for selling chimneys, furnances, etc. Strongly implementing PWA features such as caching and offline storage. It was developed using ScandiPWA library and has thoundands (around 10K) of active users daily!',
+    demo: 'https://kratki.com',
+    img: kratkiImg,
+    techStack: ['React', 'Redux', 'ScandiPWA', 'GraphQL']
+  },
+  { 
+    name: 'Yours',
+    desc: 'Created at Goodylabs. I was responsible for delivering mobile client for app tailored for managing bookings at coworking spaces.\nUnfortunately this qucik gif is all I have left from this app :/. Some of the main features are: calendar, support chat, qr code for door opening, notifications, listing and inviting collegues to your bookings, managing user profile, etc.',
+    img: yoursDemoGif,
+    repository: null,
+    techStack: ['React Native', 'MobX', 'Typescript']
+  },
   {
     name: 'Twitch clone',
     desc: 'Twitch.tv rip off based on Twitch Dev API.\nI wanted to see how far I can go with making 1:1 twitch clone using publicly available API. Turns out not so far :)\nFor this project I also created simple, proxy-like API to send my requests through',
@@ -28,13 +42,6 @@ const projects = [
     video: canteenVideo,
     repository: 'https://github.com/pabichw/canteen',
     techStack: ['React Native', 'Ruby On Rails', 'MongoDB']
-  },
-  {
-    name: 'Yours',
-    desc: 'Created at Goodylabs. I was responsible for delivering mobile client for app tailored for managing bookings at coworking spaces.\nUnfortunately this qucik gif is all I have left from this app :/. Some of the main features are: calendar, support chat, qr code for door opening, notifications, listing and inviting collegues to your bookings, managing user profile, etc.',
-    img: yoursDemoGif,
-    repository: null,
-    techStack: ['React Native', 'Typescript']
   },
   {
     name: 'Cho Na Mecz',
@@ -56,8 +63,8 @@ class ProjectsGallery extends Component {
         <div>
           {projects.map((p, idx) => {
             return(
-              <Fade bottom>
-                <section className="project-item" key={idx}>
+              <Fade bottom key={`project-fade-${idx}`}>
+                <section className="project-item">
                   <div className={"project-number-wrapper ".concat(idx % 2 === 0 ? '' : 'to-the-right')}>
                     {/* <div className="project-number">{idx + 1}</div> */}
                   </div>
@@ -66,14 +73,13 @@ class ProjectsGallery extends Component {
                     {p.video?
                       <video className="project-video" controls>
                         <source src={p.video} type="video/mp4"/>
-                        Your browser doesn't support video players ;( Just... use Chrome for god sake - it's year 2019.
+                        Your browser doesn't support video players ;( Just... use Chrome for god sake - it's year 2022.
                       </video>
                       :
                       <img className="project-img" alt="project-preview" src={p.img}/>
                     }
                     </Fade>
                     <Fade right={idx % 2 === 0} left={idx % 2 !== 0}>
-  
                     <div className="desc-container">
                       <div className="project-name underline-project-name">{p.name}</div>
                       <div className="tech-stack">{p.techStack.join(' / ')}</div>

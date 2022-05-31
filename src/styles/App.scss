@@ -1,3 +1,14 @@
+/* palette */
+$gray: #707070;
+$gray2: #8e8e8e;
+$gold: #a18c00;
+$white: #fff;
+$white2: #E0E0E0;
+$white3: #F2F2F2;
+$darkgreen: #1b3e1b;
+/* *** */
+
+/* theme */
 $primary-color: #1b3e1b;
 $secondary-color: #1b3e1b;
 $secondary-color-highlighted: #236123;
@@ -8,19 +19,12 @@ $font-color: #101b0f;
 $primary-font-color: #836E00;
 $menu-mobile-background: rgba(20,31,46,0.67);
 
-$gray: #707070;
-$gray2: #8e8e8e;
-$gold: #a18c00;
-$white: #fff;
-$white2: #E0E0E0;
-$white3: #F2F2F2;
-$darkgreen: #1b3e1b;
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display');
 
 $openSans: 'Open Sans', sans-serif;
 $montserrat: 'Montserrat', sans-serif;
 $playFair: 'Playfair', serif;
+/* *** */
 
 * {
   margin: 0;
