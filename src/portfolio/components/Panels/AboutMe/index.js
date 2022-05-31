@@ -7,10 +7,12 @@ import PostThumbnail from '../../PostThumbnail/index';
 
 const studentIco = '/static/images/student-ico.png';
 const workIco = '/static/images/work-ico.png';
+const reactIco = '/static/images/react.png';
 
 const facts = [
   {label: 'I\'ve been coding commercially since 2019 and not planning to stop !!!11', ico: <img src={workIco} className="fact-ico" alt="work" />},
   {label: 'I\’m a Bachelor of Computer Science graduted from Lodz University of Technology.', ico: <img src={studentIco} className="fact-ico" alt="student" />},
+  {label: 'Leading technologies I use are: React, Redux, HTML, Sass. I also have some experience in React Native, GraphQl, ScandiPWA and a couple more.', ico: <img src={reactIco} className="technologies-ico" alt="technologies" />},
   {label: 'I enjoy front-end development!', ico: <RoundedHeart/>},
 ];
 
