@@ -12,7 +12,7 @@ const yoursDemoGif = '/static/images/yours_demo.gif';
 const projects = [
   {
     name: 'Kratki.com',
-    desc: 'Created at Advox Studio. E-commerce platform for selling chimneys, furnances, etc. Strongly implementing PWA features such as caching and offline storage. It was developed using ScandiPWA library and has thoundands (around 10K) of active users daily!',
+    desc: 'Created at Advox Studio. E-commerce platform for selling chimneys, furnances, etc. Strongly implementing PWA features such as caching and offline storage. The platform has been developed using ScandiPWA library and has 1,000+ active users daily!',
     demo: 'https://kratki.com',
     img: kratkiImg,
     techStack: ['React', 'Redux', 'ScandiPWA', 'GraphQL']
