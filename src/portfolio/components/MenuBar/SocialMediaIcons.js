@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import '../../../styles/menubar/socialMediaIcons.scss';
 import {MobileUtils} from "../../../utils/MobileUtils";
 
 const githubIco = '/static/images/github_ico_white.png';

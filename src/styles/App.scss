@@ -26,6 +26,22 @@ $montserrat: 'Montserrat', sans-serif;
 $playFair: 'Playfair', serif;
 /* *** */
 
+@import '../styles/menubar/menubar.scss';
+@import '../styles/menubar/nav.scss';
+@import '../styles/menubar/socialMediaIcons.scss';
+@import '../styles/panels/about-me/index.scss';
+@import '../styles/panels/contact/index.scss';
+@import '../styles/panels/home/index.scss';
+@import '../styles/panels/projects/index.scss';
+@import '../styles/panels/projects/projectsGallery.scss';
+@import '../styles/blog/index.scss';
+@import '../styles/blog/posts/index.scss';
+@import '../styles/blog/post-thumbnail/index.scss';
+@import '../styles/progress-bar/progressBar.scss';
+@import '../styles/rounded-heart/rounded-heart.scss';
+@import '../styles/scroll-indicator/scroll-indicator.scss';
+@import '../styles/buttons/buttons.scss';
+
 * {
   margin: 0;
   padding: 0;

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import '../../../../styles/panels/contact/index.scss';
 
 import Zoom from 'react-reveal/Zoom';
 

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import '../../../../styles/panels/projects/projectsGallery.scss';
 import Fade from 'react-reveal/Fade';
 
 const twitchCloneVideo = '/static/videos/twitch-clone.mp4';

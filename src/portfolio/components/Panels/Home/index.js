@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import '../../../../styles/panels/home/index.scss';
 import CallToActionButton from "../../Buttons/CallToActionButton";
 import {MobileUtils} from "../../../../utils/MobileUtils";
 import Fade from 'react-reveal/Fade';

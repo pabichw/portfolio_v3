@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Nav from "./Nav";
 import SocialMediaIcons from "./SocialMediaIcons";
-import '../../../styles/menubar/menubar.scss';
 import ProgressBar from "../ProgressBar";
 import Fade from 'react-reveal/Fade'
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link'
-import '../../../../styles/panels/about-me/index.scss';
 import RoundedHeart from '../../RoundedHeart/index';
 import Fade from 'react-reveal/Fade';
 import PostThumbnail from '../../PostThumbnail/index';

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import '../../../styles/rounded-heart/rounded-heart.scss';
 
 class RoundedHeart extends Component {
   render() {

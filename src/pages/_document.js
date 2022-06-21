@@ -4,15 +4,14 @@ import { GA_TRACKING_ID } from '../utils/GTag';
 
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
-        const initialProps = await Document.getInitialProps(ctx)
-        return { ...initialProps }
-      }
+      const initialProps = await Document.getInitialProps(ctx)
+      return { ...initialProps }
+    }
 
     render() {
       return (
           <Html lang={this.props.lang || "en"}>
             <Head>
-              <title>{'Frontend Developer with strong focus on React and React Native. Based in Lodz but willing to work remotely 🙃'}</title>
               <meta property="og:description" content="Come by and check out my resume or read IT related articles at my blog. Always willing to look forward to new job opportunities - hit me on LinkedIn" key="description" />
               <meta name="keywords" content="frontend developer, programming, software developer, portfolio, react, react native, HTML, CSS, JavaScript, Łódź, blog"/>
               <meta charset="utf-8"/>

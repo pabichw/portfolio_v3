@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import '../../../../styles/panels/projects/index.scss';
 import ProjectsGallery from "./ProjectsGallery";
 import Fade from 'react-reveal/Fade';
 

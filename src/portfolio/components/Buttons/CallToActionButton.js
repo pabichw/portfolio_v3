@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import '../../../styles/buttons/callToActionButton.scss'
-import '../../../styles/buttons/buttons.scss'
 
 class CallToActionButton extends Component {
   render() {

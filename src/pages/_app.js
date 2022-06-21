@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
-import {pageview} from "@/utils/GTag";
+import { pageview } from "../utils/GTag";
 import '../styles/App.scss';
+import Head from 'next/head';
 
 const App = ({ Component, pageProps }) => {
   const router = useRouter();
@@ -16,7 +17,12 @@ const App = ({ Component, pageProps }) => {
     };
   }, [router.events]);
 
-  return <Component {...pageProps} />;
+  return <>
+    <Head>
+      <title>{'Frontend Developer with strong focus on React and React Native. Based in Lodz but willing to work remotely 🙃'}</title>
+    </Head>
+    <Component {...pageProps} />
+  </>;
 };
 
 export default App;

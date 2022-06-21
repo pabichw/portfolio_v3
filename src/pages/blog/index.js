@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../styles/blog/index.scss';
 import { GraphQLClient, gql } from 'graphql-request';
 import PostThumbnail from 'src/portfolio/components/PostThumbnail';
 import MenuBar from '../../portfolio/components/MenuBar'

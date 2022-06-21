@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import '../../../styles/scroll-indicator/scroll-indicator.scss';
 import {Metrics} from "../../../utils/Metrics";
 import {MobileUtils} from "../../../utils/MobileUtils";
 

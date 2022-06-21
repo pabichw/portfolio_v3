@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Link from 'next/link'
-import '../../../styles/menubar/nav.scss';
 import {MobileUtils} from "../../../utils/MobileUtils";
 
 const burgerIco = "/static/images/burger_ico_white.svg";
