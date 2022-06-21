@@ -2,7 +2,6 @@ import React from 'react';
 import { GraphQLClient, gql } from 'graphql-request';
 import Link from 'next/link';
 import Menu from '../../../portfolio/components/MenuBar';
-import '../../../styles/blog/posts/index.scss';
 
 export default function Post({ post }) {
   console.log('post', post)
