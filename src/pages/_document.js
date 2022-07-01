@@ -14,7 +14,7 @@ class MyDocument extends Document {
             <Head>
               <meta property="og:description" content="Come by and check out my resume or read IT related articles at my blog. Always willing to look forward to new job opportunities - hit me on LinkedIn" key="description" />
               <meta name="keywords" content="frontend developer, programming, software developer, portfolio, react, react native, HTML, CSS, JavaScript, Łódź, blog"/>
-              <meta charset="utf-8"/>
+              <meta charSet="utf-8"/>
               <meta name="author" content="Wiktor Pabich"/>
               <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
               <script

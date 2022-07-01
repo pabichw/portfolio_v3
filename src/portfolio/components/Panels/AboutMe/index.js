@@ -36,7 +36,7 @@ const AboutMe = ({ postsData }) => {
           </ul>
         </Fade>
         <Fade bottom>
-          <section class="blog-section__container">
+          <section className="blog-section__container">
             <h3>Check out my recent blog posts: </h3>
             <ul>
               {postsData?.posts?.map(post => <PostThumbnail key={`post-${post.id}`} data={post} />)}

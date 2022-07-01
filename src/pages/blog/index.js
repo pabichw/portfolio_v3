@@ -10,39 +10,33 @@ export default function Blog({ allPostsData }) {
         <main className="blog-container">
             <h2>Blog</h2>
             <section className="blog-container__posts-grid">
-                {allPostsData?.posts?.map(post => <PostThumbnail key={`${post.title}-thumb`} data={post}/>)}
+                {allPostsData?.posts?.map(post => <PostThumbnail key={`${post.attributes.title}-thumb`} data={post}/>)}
             </section>
         </main>
     </>
   )
 }
 
-const GET_POSTS_ALL = gql`
-    query GetPostsRecent {
-        posts {
-        nodes {
-            title
-            uri
-            content
-            slug
-            featuredImage  {
-                node {
-                    id
-                    sourceUrl
+const GET_POSTS = gql`
+    query { 
+        blogPosts(filters: {}, pagination: {}, sort: [], publicationState: LIVE) {
+            data {
+                id
+                attributes {
+                    content
+                    title
                 }
             }
         }
     }
-}
 `;
-
 export async function getStaticProps() {
-    const graphcms = new GraphQLClient('http://panel.pabich.cc/graphql');
-    const {posts: {nodes: posts}} = await graphcms.request(GET_POSTS_ALL)
+    const graphcms = new GraphQLClient('https://pabich-panel.lm.r.appspot.com/graphql');
+    const { blogPosts: { data: posts } } = await graphcms.request(GET_POSTS)
 
     return {
         props: {
-            allPostsData: {posts},
+            allPostsData: { posts },
         },
     }
 }

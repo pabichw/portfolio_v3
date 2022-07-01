@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Menu from '../../../portfolio/components/MenuBar';
 
 export default function Post({ post }) {
-  console.log('post', post)
   const imgUrl = post.featuredImage?.node.sourceUrl;
   
   const imgStyles = imgUrl && bckgStyles(imgUrl);
@@ -20,8 +19,8 @@ export default function Post({ post }) {
           <div className="article__featured-image-wrapper" style={imgStyles}/>
             {/* <img alt={`featured ${post.featuredImage?.node.sourceUrl}`} src={post.featuredImage?.node.sourceUrl}/>
           </div> */}
-          <h2 className="article__title">{post.title}</h2>
-          <section className="article__content" dangerouslySetInnerHTML={{__html: post.content}}/>
+          <h2 className="article__title">{post.attributes.title}</h2>
+          <section className="article__content" dangerouslySetInnerHTML={{__html: post.attributes.content}}/>
         </article>
       </div>
     </>
@@ -35,15 +34,14 @@ const bckgStyles = url => ({
   'background-repeat': 'no-repeat',
 })
 
-const GET_POST_BY_SLUG = slug => gql`
-  query GetPostsBySlug {
-    postBy(slug: \"${slug}\") {
-      title
-      content
-      featuredImage  {
-        node {
-            id
-            sourceUrl
+const GET_POST_BY_ID = (id) => gql`
+  query { 
+    blogPost(id: ${id}) {
+      data {
+        id
+        attributes {
+          title
+          content
         }
       }
     }
@@ -51,35 +49,35 @@ const GET_POST_BY_SLUG = slug => gql`
 `;
 
 export async function getStaticProps({ params }) {
-  const graphcms = new GraphQLClient('http://panel.pabich.cc/graphql');
-  const {postBy} = await graphcms.request(GET_POST_BY_SLUG(params.slug))
+  const graphcms = new GraphQLClient('https://pabich-panel.lm.r.appspot.com/graphql');
+  const { blogPost: { data: blogPost } } = await graphcms.request(GET_POST_BY_ID(params.slug))
 
   return {
     props: {
-      post: postBy
+      post: blogPost
     },
   }
 }
 
-const GET_POSTS_SLUGS_ALL = gql`
-  query GetPostsSlugsAll {
-    posts {
-      nodes {
-        slug
+const GET_POSTS = gql`
+  query { 
+    blogPosts(filters: {}, pagination: {}, sort: [], publicationState: LIVE) {
+      data {
+        id
       }
     }
   }
 `;
 
 export async function getStaticPaths() {
-  const graphcms = new GraphQLClient('http://panel.pabich.cc/graphql');
-  const {posts: {nodes: posts}} = await graphcms.request(GET_POSTS_SLUGS_ALL)
+  const graphcms = new GraphQLClient('https://pabich-panel.lm.r.appspot.com/graphql');
+  const { blogPosts: { data: posts } } = await graphcms.request(GET_POSTS)
 
   return {
     paths: posts.map((post) => {
       return {
         params: {
-          slug: post.slug,
+          slug: post.id,
         },
       }
     }),

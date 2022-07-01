@@ -19,6 +19,7 @@
 
 .post-container__article {
     width: 100%;
+    min-height: 100vh;
 }
 
 .article__featured-image-wrapper {
@@ -33,7 +34,7 @@
 }
 
 .article__title { 
-    font-size: 4rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 

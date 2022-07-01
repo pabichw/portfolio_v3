@@ -8,7 +8,8 @@ function createApolloClient() {
   return new ApolloClient({
     ssrMode: true,
     link: new HttpLink({
-      uri: "https://panel.pabich.cc/graphql",
+      // TODO: env
+      uri: "https://pabich-panel.lm.r.appspot.com/graphql",
     }),
     cache: new InMemoryCache(),
   });

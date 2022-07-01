@@ -9,31 +9,23 @@ function HomePage(props) {
 }
 
 const GET_POSTS_RECENT = gql`
-    query GetPostsRecent {
-        posts(first:3) {
-        nodes {
-            title
-            uri
-            content
-            slug
-            featuredImage  {
-                node {
-                    id
-                    sourceUrl
-                }
+    query { 
+        blogPosts(filters: {}, pagination: { pageSize: 3 }, sort: [], publicationState: LIVE) {
+            data {
+                id
+                attributes { title, content }
             }
         }
     }
-}
 `;
 
 export async function getStaticProps() {
-    const graphcms = new GraphQLClient('http://panel.pabich.cc/graphql');
-    const {posts: {nodes: posts}} = await graphcms.request(GET_POSTS_RECENT)
+    const graphcms = new GraphQLClient('https://pabich-panel.lm.r.appspot.com/graphql');
+    const { blogPosts: { data: posts } } = await graphcms.request(GET_POSTS_RECENT)
 
     return {
         props: {
-        postsData: {posts},
+            postsData: { posts },
         },
     }
 }
