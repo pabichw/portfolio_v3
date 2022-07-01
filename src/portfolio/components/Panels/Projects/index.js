@@ -13,26 +13,10 @@ class ProjectsPanel extends Component {
     const { scrollbarTriggered } = this.state;
     const currPos = document.documentElement.scrollTop;
     const projectsPosY = document.getElementById('projects').getBoundingClientRect().y;
-    const contactPosY = document.getElementById('contact').getBoundingClientRect().y;
 
     if ( currPos > projectsPosY + 1000 && !scrollbarTriggered ) {
-      this._startUpdatingProgressBar();
       this.setState({scrollbarTriggered: true});
     }
-
-    if ( currPos > contactPosY + 1000 ) {
-      this._stopUpdatingProgressBar();
-    }
-  };
-
-  _startUpdatingProgressBar = () => {
-    // console.log("updating Progress bar: START");
-    // window.addEventListener('scroll', this._updateProgressBar);
-  };
-
-  _stopUpdatingProgressBar = () => {
-    // console.log("updating Progress bar: STOP");
-    // window.removeEventListener('scroll', this._updateProgressBar);
   };
 
   _updateProgressBar = () => {
@@ -60,7 +44,7 @@ class ProjectsPanel extends Component {
           </Fade>
           <Fade bottom>
             <p>
-              During my 2.5+ yr of commercial experience I've developed a few fun frontend projects. I have listed a few below. Also, a couple of listed below I made in my spare time.
+              During my 2.5+ yrs of commercial experience I've developed a few fun frontend projects. I have listed a few below. Also, a couple of listed below I made in my spare time.
             </p>
           </Fade>
         </article>
@@ -70,7 +54,5 @@ class ProjectsPanel extends Component {
   }
 
 }
-
-ProjectsPanel.propTypes = {};
 
 export default ProjectsPanel;
