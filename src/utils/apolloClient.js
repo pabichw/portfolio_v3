@@ -9,7 +9,7 @@ function createApolloClient() {
     ssrMode: true,
     link: new HttpLink({
       // TODO: env
-      uri: "https://pabich-panel.lm.r.appspot.com/graphql",
+      uri: "https://strapi-pcxo.onrender.com/graphql",
     }),
     cache: new InMemoryCache(),
   });

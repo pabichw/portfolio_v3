@@ -31,7 +31,7 @@ const GET_POSTS = gql`
     }
 `;
 export async function getStaticProps() {
-    const graphcms = new GraphQLClient('https://pabich-panel.lm.r.appspot.com/graphql');
+    const graphcms = new GraphQLClient('https://strapi-pcxo.onrender.com/graphql');
     const { blogPosts: { data: posts } } = await graphcms.request(GET_POSTS)
 
     return {

@@ -49,7 +49,7 @@ const GET_POST_BY_ID = (id) => gql`
 `;
 
 export async function getStaticProps({ params }) {
-  const graphcms = new GraphQLClient('https://pabich-panel.lm.r.appspot.com/graphql');
+  const graphcms = new GraphQLClient('https://strapi-pcxo.onrender.com/graphql');
   const { blogPost: { data: blogPost } } = await graphcms.request(GET_POST_BY_ID(params.slug))
 
   return {
@@ -70,7 +70,7 @@ const GET_POSTS = gql`
 `;
 
 export async function getStaticPaths() {
-  const graphcms = new GraphQLClient('https://pabich-panel.lm.r.appspot.com/graphql');
+  const graphcms = new GraphQLClient('https://strapi-pcxo.onrender.com/graphql');
   const { blogPosts: { data: posts } } = await graphcms.request(GET_POSTS)
 
   return {
