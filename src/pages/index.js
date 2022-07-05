@@ -13,7 +13,17 @@ const GET_POSTS_RECENT = gql`
         blogPosts(filters: {}, pagination: { pageSize: 3 }, sort: [], publicationState: LIVE) {
             data {
                 id
-                attributes { title, content }
+                attributes {
+                    title, 
+                    content 
+                    featuredImage {
+                        data {
+                          attributes {
+                            url
+                          }
+                        }
+                    } 
+                }
             }
         }
     }

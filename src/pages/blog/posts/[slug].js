@@ -3,8 +3,10 @@ import { GraphQLClient, gql } from 'graphql-request';
 import Link from 'next/link';
 import Menu from '../../../portfolio/components/MenuBar';
 
+const IMAGE_PROVIDER = `https://strapi-pcxo.onrender.com`
+
 export default function Post({ post }) {
-  const imgUrl = post.featuredImage?.node.sourceUrl;
+  const imgUrl = `${IMAGE_PROVIDER}${post.attributes.featuredImage?.data.attributes.url}`;
   
   const imgStyles = imgUrl && bckgStyles(imgUrl);
 
@@ -42,6 +44,13 @@ const GET_POST_BY_ID = (id) => gql`
         attributes {
           title
           content
+          featuredImage {
+            data {
+              attributes {
+                url
+              }
+            }
+          } 
         }
       }
     }

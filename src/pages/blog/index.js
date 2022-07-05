@@ -25,6 +25,13 @@ const GET_POSTS = gql`
                 attributes {
                     content
                     title
+                    featuredImage {
+                        data {
+                            attributes {
+                                url
+                            }
+                        }
+                    } 
                 }
             }
         }

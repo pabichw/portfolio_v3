@@ -3,9 +3,11 @@ import Link from 'next/link';
 
 const stripHTML = html => html.replace(/(<([^>]+)>)/gi, "");
 
+const IMAGE_PROVIDER = `https://strapi-pcxo.onrender.com`
+
 const PostThumbnail = ({ data }) => {
     const { id, attributes: { content, featuredImage, title } } = data;
-    const imgUrl = featuredImage?.node.sourceUrl;
+    const imgUrl = `${IMAGE_PROVIDER}${featuredImage?.data.attributes.url}`;
 
     const postSnippet = stripHTML(content.slice(0, 250));
     const ellipsis = content.length > 250 && '...'; // TODO: should be postSnippet.length > ....
