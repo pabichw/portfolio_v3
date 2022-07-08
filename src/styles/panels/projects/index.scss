@@ -1,18 +1,19 @@
 .projects-panel-wrapper{
-  padding: 20px 60px;
   min-height: 100vh;
+  overflow-x: hidden;
+  padding: 1rem 2rem;
   
   .introduction {
     p {
-      margin-top: 10px;
       line-height: 1.5rem;
+      margin-top: 10px;
     }
   }
 }
 
 .projects-list-wrapper{
-  width: 100%;
+  align-items: stretch;
   display: flex;
   justify-content: center;
-  align-items: stretch;
+  width: 100%;
 }
