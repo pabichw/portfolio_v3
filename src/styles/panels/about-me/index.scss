@@ -26,9 +26,8 @@ h3 {
   color: $gray2;
 }
 .facts-wrapper {
-  display: flex;
-  justify-content: center;
-  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .fact {
   display: flex;
@@ -113,7 +112,7 @@ h3 {
     display: block;
   }
   .facts-wrapper {
-    display: block;
+    grid-template-columns: 1fr 1fr;
   }
   .technologies-wrapper{
     display:block;
@@ -128,5 +127,11 @@ h3 {
   .blog-section__container > ul {
     flex-direction: column;
     align-items:center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .facts-wrapper {
+    grid-template-columns: 1fr;
   }
 }
