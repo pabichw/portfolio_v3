@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAddressCard } from '@fortawesome/free-solid-svg-icons'
+import Fade from 'react-reveal/Fade';
+
 import CallToActionButton from "../../Buttons/CallToActionButton";
 import {MobileUtils} from "../../../../utils/MobileUtils";
-import Fade from 'react-reveal/Fade';
 
 const arrowDownPath = '/static/images/arrow-down.png';
 
@@ -49,7 +52,7 @@ class HomePanel extends Component {
           <Fade bottom>
             <h3>a<br/>front-end developer</h3>
             <div className="resume-button-wrapper">
-              <CallToActionButton text="See my LinkedIn" icon={<i className="far fa-id-card"/>} action={() => window.location.href = linkedInUrl}/>
+              <CallToActionButton text="See my LinkedIn" icon={<FontAwesomeIcon icon={faAddressCard} />} action={() => window.location.href = linkedInUrl}/>
             </div>
           </Fade>
         </header>
