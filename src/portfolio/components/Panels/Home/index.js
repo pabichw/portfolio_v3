@@ -8,7 +8,7 @@ import {MobileUtils} from "../../../../utils/MobileUtils";
 
 const arrowDownPath = '/static/images/arrow-down.png';
 
-const videoPath = '/static/videos/tree.mp4';
+const videoPath = '/static/videos/tree.webm';
 const tree_dummy_mobile = '/static/images/tree_dummy_mobile.jpg';
 
 class HomePanel extends Component {

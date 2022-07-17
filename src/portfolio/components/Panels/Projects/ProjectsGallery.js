@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Fade from 'react-reveal/Fade';
 
 const twitchCloneVideo = '/static/videos/twitch-clone.mp4';
-const canteenVideo = '/static/videos/canteen_all.mp4';
+const canteenVideo = '/static/videos/canteen_all.webm';
 const gdzieJestMeczImg = '/static/images/gdzie_jest_mecz.png';
 const kratkiImg = '/static/images/kratki.png';
 const yoursDemoGif = '/static/images/yours_demo.gif';
