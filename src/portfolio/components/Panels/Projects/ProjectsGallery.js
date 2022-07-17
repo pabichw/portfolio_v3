@@ -3,8 +3,8 @@ import Fade from 'react-reveal/Fade';
 
 const twitchCloneVideo = '/static/videos/twitch-clone.mp4';
 const canteenVideo = '/static/videos/canteen_all.webm';
-const gdzieJestMeczImg = '/static/images/gdzie_jest_mecz.png';
-const kratkiImg = '/static/images/kratki.png';
+const gdzieJestMeczImg = '/static/images/gdzie_jest_mecz.webp';
+const kratkiImg = '/static/images/kratki.webp';
 const yoursVideo = '/static/videos/yours.webm';
 
 //TODO: [ Firefox] bugged widths on videos
