@@ -1,7 +1,6 @@
 h3 {
   color: $gray2;
 }
-
 .about-me-panel-wrapper {
   display: flex;
   flex-flow: column;
@@ -104,6 +103,10 @@ h3 {
     padding-top: 1rem;
     font-size: 0.9rem;
     font-weight: 600;
+  }
+  p {
+    color: $gray2;
+    font-size: 0.8rem;
   }
 }
 

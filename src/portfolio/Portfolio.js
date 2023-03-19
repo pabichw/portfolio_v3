@@ -7,18 +7,18 @@ import Contact from "./components/Panels/Contact";
 import ScrollIndicator from "./components/ScrollIndicator";
 
 
-const Portfolio = ({postsData}) => {
+const Portfolio = ({ postsData }) => {
 
   return (
     <main className="App">
-      <MenuBar/>
-      <ScrollIndicator/>
-      <Home/>
-      <AboutMe postsData={postsData}/>
-      <Projects/>
-      <Contact/>
-      <div className="line"/>
-      <footer>Powered by pabich.cc<br/>🎵+☕= this website</footer>
+      <MenuBar />
+      <ScrollIndicator />
+      <Home />
+      <AboutMe postsData={postsData} />
+      <Projects />
+      <Contact />
+      <div className="line" />
+      <footer>Powered by pabich.cc<br />🎵+☕= this website</footer>
     </main>
   );
 }

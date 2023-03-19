@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Link from 'next/link'
-import {MobileUtils} from "../../../utils/MobileUtils";
+import useMobileDetect from "../../../utils/MobileUtils";
 
 const burgerIco = "/static/images/burger_ico_white.svg";
 const burgerIcoDark = "/static/images/burger_ico.svg";
@@ -8,72 +8,65 @@ const xIco = "/static/images/x_ico_white.svg";
 const xIcoDark = "/static/images/x_ico_black.svg";
 
 const tabs = [
-  {name: "home", anchor: '/'},
-  {name: "about me", anchor: '/#aboutMe'},
-  {name: "projects", anchor: '/#projects'},
-  {name: "contact", anchor: '/#contact'},
-  {name: "blog", anchor: '/blog'}
+  { name: "home", anchor: '/' },
+  { name: "about me", anchor: '/#aboutMe' },
+  { name: "projects", anchor: '/#projects' },
+  { name: "contact", anchor: '/#contact' },
+  { name: "blog", anchor: '/blog' }
 ]
 
 class Nav extends Component {
   state = {
     isCollapsed: true,
-    isMobile: false,
     isAfterHomePanel: false,
   };
 
   _handleBurgerClick = (e) => {
     e.preventDefault();
-    this.setState({isCollapsed: !this.state.isCollapsed});
-  };
-
-  _handleResize = () => {
-    this.setState({isMobile: MobileUtils.isDeviceMobile()});
+    this.setState({ isCollapsed: !this.state.isCollapsed });
   };
 
   _handleScroll = () => {
     const viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    this.setState({isAfterHomePanel: window.scrollY >= viewportHeight});
+    this.setState({ isAfterHomePanel: window.scrollY >= viewportHeight });
   };
 
   _handleTabOnClick = () => {
-    this.setState({isCollapsed: true}); //make sure that side menu is collapsed after tapping a tab
+    this.setState({ isCollapsed: true }); //make sure that side menu is collapsed after tapping a tab
   };
-  
-   componentDidMount() {
+
+  componentDidMount() {
     window.addEventListener('resize', this._handleResize);
     window.addEventListener('scroll', this._handleScroll);
+  }
 
-    this.setState({
-      isMobile: MobileUtils.isDeviceMobile()
-    })
-   }
-
-   componentWillUnmount() {
+  componentWillUnmount() {
     window.removeEventListener('resize', this._handleResize);
     window.removeEventListener('scroll', this._handleScroll);
-   }
+  }
 
   render() {
-    const {isCollapsed, isMobile, isAfterHomePanel} = this.state;
+    const { isCollapsed, isAfterHomePanel } = this.state;
+    const { isMobile } = useMobileDetect()
+
     return (
       <nav className="nav-wrapper">
-        <img alt="burger icon" onClick={this._handleBurgerClick} 
+        <img alt="burger icon" onClick={this._handleBurgerClick}
           src={
-          isCollapsed?
-            isAfterHomePanel ? burgerIcoDark: burgerIco
-            :
-            isAfterHomePanel ?
-                isMobile? xIco : xIcoDark
+            isCollapsed ?
+              isAfterHomePanel ? burgerIcoDark : burgerIco
               :
-              xIco
+              isAfterHomePanel ?
+                isMobile() ? xIco : xIcoDark
+                :
+                xIco
           }
           className="burger-ico"
         />
-        <div className={isMobile? (isCollapsed ? 'side-menu-container-hidden':'side-menu-container-shown') : ''}>
-          {tabs.map((tab, i) => 
+        <div className={isMobile() ? (isCollapsed ? 'side-menu-container-hidden' : 'side-menu-container-shown') : ''}>
+          {tabs.map((tab, i) =>
             <Link key={i}
-                href={tab.anchor}
+              href={tab.anchor}
             >
               <p className={"tab white-font"}>
                 {tab.name}
@@ -86,5 +79,4 @@ class Nav extends Component {
   }
 }
 
-Nav.propTypes = {};
 export default Nav;
