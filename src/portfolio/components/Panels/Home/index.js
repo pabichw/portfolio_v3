@@ -9,7 +9,6 @@ import useMobileDetect, { MobileUtils } from "../../../../utils/MobileUtils";
 const arrowDownPath = '/static/images/arrow-down.png';
 
 const VIDEO_PATH_WEBM = '/static/videos/tree.webm';
-const VIDEO_PATH_H264 = '/static/videos/tree.h264';
 const TREE_DUMMY_MOBILE = '/static/images/tree_dummy_mobile.jpg';
 const LINKEDIN_URL = "http://linked.in/pabichw";
 
