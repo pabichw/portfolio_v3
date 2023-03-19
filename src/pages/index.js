@@ -3,9 +3,9 @@ import { GraphQLClient, gql } from 'graphql-request';
 import Portfolio from '../portfolio/Portfolio';
 
 function HomePage(props) {
-    return (
-        <Portfolio {...props} />
-    )
+  return (
+    <Portfolio {...props} />
+  )
 }
 
 const GET_POSTS_RECENT = gql`
@@ -30,14 +30,15 @@ const GET_POSTS_RECENT = gql`
 `;
 
 export async function getStaticProps() {
-    const graphcms = new GraphQLClient('https://strapi-pcxo.onrender.com/graphql');
-    const { blogPosts: { data: posts } } = await graphcms.request(GET_POSTS_RECENT)
+  // const graphcms = new GraphQLClient('https://strapi-pcxo.onrender.com/graphql');
+  // const { blogPosts: { data: posts } } = await graphcms.request(GET_POSTS_RECENT)
 
-    return {
-        props: {
-            postsData: { posts },
-        },
-    }
+  // return {
+  //     props: {
+  //         postsData: { posts },
+  //     },
+  // }
+  return ({ props: {} })
 }
 
 

@@ -8,7 +8,8 @@ import {MobileUtils} from "../../../../utils/MobileUtils";
 
 const arrowDownPath = '/static/images/arrow-down.png';
 
-const videoPath = '/static/videos/tree.webm';
+const videoPathWebM = '/static/videos/tree.webm';
+const videoPathH264 = '/static/videos/tree.h264';
 const tree_dummy_mobile = '/static/images/tree_dummy_mobile.jpg';
 
 class HomePanel extends Component {
@@ -29,17 +30,14 @@ class HomePanel extends Component {
   render() {
     const { linkedInUrl, isIOS } = this.state;
 
-    const video = videoPath && !isIOS
-      ?
-      <video id="video-bckg" playsinline autoPlay muted loop>
-        <source src={videoPath} type="video/mp4" />
-      </video>
-      : <img id="video-placeholder" src={tree_dummy_mobile} alt="video-placeholder"/>;
+    const videoPath = !isIOS ? videoPathH264 : videoPathWebM;
 
     return (
       <div id="home" className="home-panel-wrapper scroll-container">
         <div className="video-wrapper">
-          {video}
+          <video id="video-bckg" playsinline autoPlay muted loop>
+            <source src={videoPath} type="video/mp4" />
+          </video>
           <div className="video-filter"/>
         </div>
         <header className="home-text-wrapper">
@@ -61,6 +59,9 @@ class HomePanel extends Component {
           <h4 className="scroll-down-incent-text">Scroll down to see more</h4>
           <img alt="arrow down icon" src={arrowDownPath} className='scroll-down-incent-icon'/>
         </a>
+        <video className="test-video" playsinline autoPlay muted loop>
+          <source src={videoPath} type="video/webm" />
+        </video>
       </div>
     );
   }

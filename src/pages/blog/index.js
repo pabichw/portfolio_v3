@@ -5,14 +5,14 @@ import MenuBar from '../../portfolio/components/MenuBar'
 
 export default function Blog({ allPostsData }) {
   return (
-      <>
-        <MenuBar alwaysStick={true}/>
-        <main className="blog-container">
-            <h2>Blog</h2>
-            <section className="blog-container__posts-grid">
-                {allPostsData?.posts?.map(post => <PostThumbnail key={`${post.attributes.title}-thumb`} data={post}/>)}
-            </section>
-        </main>
+    <>
+      <MenuBar alwaysStick={true} />
+      <main className="blog-container">
+        <h2>Blog</h2>
+        <section className="blog-container__posts-grid">
+          {allPostsData?.posts?.map(post => <PostThumbnail key={`${post.attributes.title}-thumb`} data={post} />)}
+        </section>
+      </main>
     </>
   )
 }
@@ -37,13 +37,14 @@ const GET_POSTS = gql`
         }
     }
 `;
-export async function getStaticProps() {
-    const graphcms = new GraphQLClient('https://strapi-pcxo.onrender.com/graphql');
-    const { blogPosts: { data: posts } } = await graphcms.request(GET_POSTS)
 
-    return {
-        props: {
-            allPostsData: { posts },
-        },
-    }
+export async function getStaticProps() {
+  // const graphcms = new GraphQLClient('https://strapi-pcxo.onrender.com/graphql');
+  // const { blogPosts: { data: posts } } = await graphcms.request(GET_POSTS)
+
+  return ({
+    props: {
+      // allPostsData: { posts },
+    },
+  })
 }

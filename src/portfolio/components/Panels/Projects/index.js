@@ -44,7 +44,7 @@ class ProjectsPanel extends Component {
           </Fade>
           <Fade bottom>
             <p>
-              During my 2.5+ yrs of commercial experience I've developed a few fun frontend projects. I have listed a few below. Also, a couple of listed below I made in my spare time.
+              During my 3+ yrs of commercial experience I've developed a few fun frontend projects. I have listed a few below. Also, a couple of listed below I made in my spare time.
             </p>
           </Fade>
         </article>

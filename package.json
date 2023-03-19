@@ -14,7 +14,8 @@
     "react-reveal": "^1.2.2",
     "react-scripts": "^2.1.8",
     "react-scroll-parallax": "^2.3.4",
-    "react-scroll-to": "^3.0.0-beta.6"
+    "react-scroll-to": "^3.0.0-beta.6",
+    "sass": "^1.59.3"
   },
   "scripts": {
     "dev": "next dev",
@@ -34,7 +35,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "node-sass": "^5.0.0",
     "styled-jsx-plugin-sass": "^1.0.0"
   }
 }

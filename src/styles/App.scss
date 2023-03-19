@@ -46,13 +46,14 @@ $playFair: 'Playfair', serif;
   margin: 0;
   padding: 0;
 }
-body {
 
+body {
   font-family: $montserrat;
   font-weight: 300;
   color: $font-color;
   background: $bckg-color;
   cursor: default;
+  scroll-behavior: smooth;
 }
 
 .scroll-container {
