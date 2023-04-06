@@ -4,7 +4,7 @@ import { faAddressCard } from '@fortawesome/free-solid-svg-icons'
 import Fade from 'react-reveal/Fade';
 
 import CallToActionButton from "../../Buttons/CallToActionButton";
-import useMobileDetect, { MobileUtils } from "../../../../utils/MobileUtils";
+import useMobileDetect from "../../../../utils/MobileUtils";
 
 const arrowDownPath = '/static/images/arrow-down.png';
 
@@ -36,7 +36,11 @@ class HomePanel extends Component {
           <Fade bottom>
             <h3>a<br />front-end developer</h3>
             <div className="resume-button-wrapper">
-              <CallToActionButton text="See my LinkedIn" icon={<FontAwesomeIcon icon={faAddressCard} />} action={() => window.location.href = linkedInUrl} />
+              <CallToActionButton 
+                text="See my LinkedIn" 
+                icon={<FontAwesomeIcon icon={faAddressCard} />} 
+                action={() => window.location.href = LINKEDIN_URL } 
+              />
             </div>
           </Fade>
         </header>
