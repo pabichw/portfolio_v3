@@ -24,7 +24,9 @@ const App = ({ Component, pageProps }) => {
 
   return <>
     <Head>
-      <title>{'Frontend Developer with strong focus on React and React Native. Based in Łódź but willing to work remotely 🙃'}</title>
+      <title>
+        Frontend Developer with strong focus on React and React Native. Based in Łódź, but willing to work remotely <span role="img" aria-label="smile-emoji">🙃</span>
+      </title>
     </Head>
     <Component {...pageProps} />
   </>;
