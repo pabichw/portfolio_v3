@@ -4,7 +4,7 @@ import { faAddressCard } from '@fortawesome/free-solid-svg-icons'
 import Fade from 'react-reveal/Fade';
 
 import CallToActionButton from "../../Buttons/CallToActionButton";
-import useMobileDetect from "../../../../utils/MobileUtils";
+import useMobileDetect, { isSSR, rendererUserAgent } from "../../../../utils/MobileUtils";
 
 const arrowDownPath = '/static/images/arrow-down.png';
 
@@ -19,13 +19,18 @@ class HomePanel extends Component {
 
     return (
       <div id="home" className="home-panel-wrapper scroll-container">
-        <div className="video-wrapper">
-          <video id="video-bckg" playsinline autoPlay muted loop>
-            <source src={VIDEO_PATH_WEBM} type="video/webm" />
-          </video>
-          {isMobile() && <img id="video-bckg" src={TREE_DUMMY_MOBILE} />}
-          <div className="video-filter" />
-        </div>
+        {!isSSR(rendererUserAgent) && 
+          <div className="video-wrapper">
+            {isMobile() ? 
+              <img id="video-bckg" src={TREE_DUMMY_MOBILE} />
+              :
+              <video id="video-bckg" playsinline autoPlay muted loop>
+                <source src={VIDEO_PATH_WEBM} type="video/webm" />
+              </video>
+            }
+            <div className="video-filter" />
+          </div>
+        }
         <header className="home-text-wrapper">
           <Fade top>
             <h3>Hello there</h3>
